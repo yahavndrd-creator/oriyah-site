@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אוריה אלחרר – טיפולים רב־תחומיים</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7f6;
+            color: #333;
+        }
+
+        header {
+            background: #e8f1ee;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            background: #cfe3dc;
+            padding: 10px;
+        }
+
+        nav button {
+            background: #ffffff;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        nav button:hover {
+            background: #e0f0ea;
+        }
+
+        section {
+            display: none;
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h1, h2 {
+            color: #355f5b;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>אוריה אלחרר</h1>
+    <p>טיפולים רב־תחומיים | תהליכים רגשיים | דיוק והכוונה</p>
+</header>
+
+<nav>
+    <button onclick="showSection('about')">עליי</button>
+    <button onclick="showSection('methods')">שיטות טיפול</button>
+    <button onclick="showSection('process')">תהליכים</button>
+</nav>
+
+<section id="about" class="active">
+    <h2>קצת עליי</h2>
+    <p>
+        נעים מאוד, אני אוריה אלחרר.  
+        מלווה אנשים בתהליכים טיפוליים עמוקים, מדויקים ורגישים,
+        מתוך שילוב של כלים טיפוליים ואבחוניים שרכשתי לאורך השנים.
+    </p>
+
+    <img src="your-photo.jpg" alt="אוריה אלחרר">
+</section>
+
+<section id="methods">
+    <h2>שיטות טיפול</h2>
+    <p>
+        אני משלבת בין NLP, עבודה עם התת־מודע, Human Design,
+        קלפי טארוט ושיח טיפולי – בהתאמה אישית לכל אדם.
+    </p>
+
+    <img src="clinic.jpg" alt="הקליניקה">
+</section>
+
+<section id="process">
+    <h2>תהליכים טיפוליים</h2>
+    <p>
+        התהליך בנוי ממפגשי אבחון והכוונה,
+        ובהמשך תהליך עומק שמטרתו ליצור שינוי אמיתי,
+        פרקטי ומשחרר – בקצב בטוח ונעים.
+    </p>
+</section>
+
+<script>
+    function showSection(id) {
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(id).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
